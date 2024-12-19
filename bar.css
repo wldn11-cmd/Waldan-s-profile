@@ -1,0 +1,294 @@
+/* Header Section */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Header Styles */
+.header {
+  width: 100%;
+  position: relative; /* needed for absolute menu */
+  background-color: #3498db;
+  color: white;
+  z-index: 1000;
+}
+
+.title-bar {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.home-button {
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.home-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Container Menu */
+.menu-container {
+  display: flex;
+  justify-content: center; /* Center menu horizontally */
+  background-color: #f0f0f0; /* Light gray background */
+  padding: 10px 0;
+}
+
+/* Menu Styles */
+
+.menu-button {
+  position: relative; /* Required for dropdown positioning */
+  display: inline-block; /* Make it a button-like element */
+}
+
+.menu-button span {
+  display: inline-block;
+  font-size: 2em; /* Adjust size as needed */
+  cursor: pointer; /* Make it clear it's clickable */
+  padding: 5px; /* Adjust padding to match button size */
+  border: 1px solid #ccc; /* Add border for better visibility */
+  border-radius: 50%; /* Make it circular */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.menu-button span:hover {
+  background-color: #f0f0f0; /* Light gray on hover */
+}
+
+.menu-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #fff; /* Dropdown background color */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    min-width: 160px;
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px; /* Rounded corners */
+    right: 0;
+}
+
+.menu-button:hover .menu-dropdown {
+  display: block; /* Show dropdown on hover */
+}
+
+.menu-dropdown li a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+
+.menu-dropdown li:last-child a {
+    border-bottom: none;
+}
+
+.menu-dropdown li a:hover {
+  background-color: #f0f0f0; /* Light gray on hover */
+}
+.menu-container {
+    display: none; /* hide menu by default */
+    position: absolute;
+    top: 100%; /*Position right below the header*/
+    right: 0;
+    background-color: white;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px; /* Adjust Menu width */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.menu-container.active {
+  display: block; /* show menu when active class is added */
+}
+.menu-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.menu-list li a{
+   display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+.menu-list li a:hover {
+   background-color: #f2f2f2
+}
+/* Content Styles */
+.content {
+  padding: 20px;
+  margin-top: 80px;
+}
+/* Table Styles */
+.family-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: sans-serif;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.family-table th,
+.family-table td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.family-table thead th {
+  background-color: #3498db;
+  font-weight: 600;
+  color: #333;
+}
+
+.family-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.family-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .family-table {
+    font-size: 0.9em;
+  }
+  .family-table th,
+  .family-table td {
+    padding: 8px 10px;
+  }
+}
+/* Profile Section Styles */
+#profile {
+    text-align: center; /* Center content */
+    margin-bottom: 40px; /* Add space below section */
+     padding: 20px; /* Add padding */
+  background-color: white; /* Set background color to white */
+  border-radius: 8px;  /* Add border radius for modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow */
+
+}
+
+.profile-image {
+    border: 5px solid white; /* Add border */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+    max-width: 100%; /* responsive image */
+    height: auto; /* responsive image*/
+    display: block;
+    margin: auto; /* responsive image*/
+}
+
+.job-title {
+    color: #777; /* Muted color for job title */
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* About Section Styles */
+#about {
+    margin-bottom: 40px; /* Space below section */
+     padding: 20px; /* Add padding */
+  background-color: white; /* Set background color to white */
+  border-radius: 8px;  /* Add border radius for modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow */
+
+}
+#about h2 {
+  border-bottom: 2px solid #ddd; /* Add a line under heading */
+  padding-bottom: 5px;
+}
+
+#about p {
+    line-height: 1.6; /* Set line height for readability */
+    margin-bottom: 15px;
+}
+
+/* Skills Section Styles */
+#skills {
+    margin-bottom: 40px;  /* Add space below the section*/
+     padding: 20px; /* Add padding */
+  background-color: white; /* Set background color to white */
+  border-radius: 8px;  /* Add border radius for modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+
+#skills h2 {
+  border-bottom: 2px solid #ddd; /* Add a line under heading */
+  padding-bottom: 5px;
+
+}
+
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+#skills li {
+    display: inline-block; /* Put skills horizontally*/
+    margin: 10px 20px;
+    font-size: 1.1rem;
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 8px 15px;
+    border-radius: 4px;
+}
+
+/* Customized Button Styles */
+.button {
+    display: inline-block;
+    padding: 12px 25px; /* Increased padding for a bigger button */
+    background-color: white;
+    color: #3498db; /* Blue text */
+    text-decoration: none;
+    border: 2px solid #3498db; /* Blue border */
+    border-radius: 30px; /* Rounded corners */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Ensure text is centered */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    cursor: pointer; /* Use pointer if you use <button> tag */
+     white-space: nowrap; /* Keep the text on one line*/
+}
+
+
+.button:hover {
+    background-color: #3498db; /* Blue background */
+    color: white; /* White text */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.button:active {
+    transform: scale(0.95);
+}
